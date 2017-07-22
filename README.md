@@ -42,7 +42,7 @@ $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 ```bash
 hduser@ubuntu:/usr/local/hadoop$ bin/hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.3.jar wordcount /user/hduser/gutenberg /user/hduser/gutenberg-output
 ```
-** remove and re-test
+** remove output for re-test
 ```bash
 hduser@ubuntu:/usr/local/hadoop$ bin/hadoop fs -rmr /user/hduser/gutenberg-output
 ```
