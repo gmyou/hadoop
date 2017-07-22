@@ -79,6 +79,6 @@ $ bin/hadoop dfs -cat /user/hduser/gutenberg-output/part-r-00000
 $ sudo netstat -plten | grep java
 ```
 
-[Total](http://{IP}:50070)
-[DataNode](http://{IP}:50075/)
-[Status](http://{IP}:50090)
+* [Total](http://{IP}:50070)
+* [DataNode](http://{IP}:50075/)
+* [Status](http://{IP}:50090)
