@@ -1,10 +1,12 @@
 # hadoop
+[Running Hadoop on Ubuntu Linux (Single-Node Cluster)](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)
+[Hadoop: Setting up a Single Node Cluster](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html)
 
 ## Requirement
-* java 1.6~1.7 recommended but 1.8 successed (hard coding on `./etc/hadoop/hadoop-env.sh`)
-```
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-```
+* Ubuntu 16.04
+* Java 1.8
+* Hadoop 2.7.3
+
 ## Installation
 * install hadoop
 ```bash
@@ -37,6 +39,22 @@ $ su - hduser
 $ ssh-keygen -t rsa -P ""
 $ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 ```
+
+## Configuration
+* java 1.6~1.7 recommended but 1.8 successed (hard coding on `./etc/hadoop/hadoop-env.sh`)
+```
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+```
+* create directory and set the required ownerships and permissions.
+```bash
+$ sudo mkdir -p /app/hadoop/tmp
+$ sudo chown hduser:hadoop /app/hadoop/tmp
+# ...and if you want to tighten up security, chmod from 755 to 750...
+$ sudo chmod 750 /app/hadoop/tmp
+```
+* `core-site.xml`
+* `mapred-site.xml`
+* `hdfs-site.xml`
 
 ## Test
 ```bash
