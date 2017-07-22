@@ -44,7 +44,20 @@ hduser@ubuntu:/usr/local/hadoop$ bin/start-dfs.sh
 hduser@ubuntu:/usr/local/hadoop$ bin/hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.3.jar wordcount /user/hduser/gutenberg /user/hduser/gutenberg-output
 hduser@ubuntu:/usr/local/hadoop$ bin/stop-dfs.sh
 ```
-** remove output for re-test
+* remove output for re-test
 ```bash
 hduser@ubuntu:/usr/local/hadoop$ bin/hadoop fs -rmr /user/hduser/gutenberg-output
 ```
+
+* view output
+```bash
+$ bin/hadoop dfs -ls /user/hduse
+$ bin/hadoop dfs -ls /user/hduser/gutenberg-output
+$ bin/hadoop dfs -cat /user/hduser/gutenberg-output/part-r-00000
+```
+
+## Web Interface
+```bash
+$ sudo netstat -plten | grep java
+```
+
