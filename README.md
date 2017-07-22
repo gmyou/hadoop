@@ -1,7 +1,7 @@
 # hadoop
 
 ## Requirement
-* java 1.6~1.7 recommended but 1.8 successed (hard coding on **./etc/hadoop/hadoop-env.sh**)
+* java 1.6~1.7 recommended but 1.8 successed (hard coding on `./etc/hadoop/hadoop-env.sh`)
 ```
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 ```
@@ -12,7 +12,7 @@ $ sudo wget http://apache.mirror.cdnetworks.com/hadoop/core/hadoop-2.7.3/hadoop-
 $ sudo tar -xvzf hadoop-2.7.3.tar.gz
 $ sudo mv hadoop-2.7.3 hadoop
 ```
-* disable IPv6 on **/etc/sysctl.conf**
+* disable IPv6 on `/etc/sysctl.conf`
 ```
 # disable ipv6
 net.ipv6.conf.all.disable_ipv6 = 1
@@ -25,7 +25,7 @@ $ cat /proc/sys/net/ipv6/conf/all/disable_ipv6
 ```
 
 
-* hduser user create and add role on **/usr/local/hadoop**
+* hduser user create and add role on `/usr/local/hadoop`
 ```bash
 $ sudo addgroup hadoop
 $ sudo adduser --ingroup hadoop hduser
